@@ -1,42 +1,90 @@
+body,
+html,
+.root,
+.root > div,
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url('https://i.imgur.com/ZDZi25c.png');
+  background-repeat: repeat;
+  background-size: 100px;
+  color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.root > div,
+.root,
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.greeting {
+  text-align: start;
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+  background: linear-gradient(44.86deg, #74bf48 24.55%, #479b43 75.06%);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+.greeting > img {
+  width: 70px;
+}
+
+.subtitle {
+  align-self: flex-start;
+  max-width: 750px;
+  text-align: start;
+  font-size: large;
+  color: #00742e;
+  margin-left: 10px;
+}
+
+ul {
+  max-width: 750px;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #00ca51;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 48px;
+}
+
+@media (max-width: 590px) {
+  ul {
+    max-width: 300px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
